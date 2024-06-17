@@ -1,9 +1,9 @@
 {
-  "name": "@auto/vehicle-plate-keyboard-react-default",
-  "version": "0.0.14",
+  "name": "afu-vehicle-plate-keyboard-react",
+  "version": "0.0.1",
   "type": "module",
-  "main": "dist/auto-vehicle-plate-keyboard-react.cjs",
-  "module": "dist/auto-vehicle-plate-keyboard-react.js",
+  "main": "dist/afu-vehicle-plate-keyboard-react.cjs",
+  "module": "dist/afu-vehicle-plate-keyboard-react.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"

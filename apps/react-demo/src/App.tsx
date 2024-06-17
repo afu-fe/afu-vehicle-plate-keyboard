@@ -1,5 +1,5 @@
 import './App.css';
-import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-react';
+import { LicenseKeyboard } from 'afu-vehicle-plate-keyboard-react';
 import React from 'react'
 
 import { useState } from 'react';

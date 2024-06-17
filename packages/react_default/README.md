@@ -4,7 +4,7 @@ React 实现的车牌键盘。
 
 ## 🚗 Demo
 
-![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-4.gif)
+![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-5.gif)
 
 ## 📷 Screenshots
 
@@ -15,13 +15,13 @@ React 实现的车牌键盘。
 ## 📦 Installation
 
 ```Javascript
-yarn add @auto/vehicle-plate-keyboard-react
+yarn add afu-vehicle-plate-keyboard-react
 ```
 
 ## 🔨 Usage
 
 ```JavaScript
-import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-react';
+import { LicenseKeyboard } from 'afu-vehicle-plate-keyboard-react';
 function App() {
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [value, setValue] = useState('');
@@ -39,15 +39,6 @@ function App() {
         done={() => setShowKeyboard(false)}
         onChange={(value: any) => setValue(value)}
         value={value}
-        defalutConfig={{
-          // "使": [
-          //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-          // ],
-          // "京": [
-          //   ['ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC'],
-          //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-          // ]
-        }}
       />
     </div>
   );

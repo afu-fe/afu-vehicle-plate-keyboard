@@ -1,52 +1,67 @@
-# @auto/vehicle-plate-keyboard-vue
+# afu-vehicle-plate-keyboard-vue
 
 vue 实现的车牌键盘。
 
-## 💡 Features
-
-- 省份/使 + 字母（无 I/O）/ 数字 + 「港澳学警领挂」
-- [新能源车牌规则](https://zh.wikipedia.org/wiki/中华人民共和国民用机动车号牌#新能源汽车号牌)
-
 ## 🚗 Demo
 
-![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/4.gif)
+![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-5.gif)
 
 ## 📷 Screenshots
 
-![1](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/1.png)
+![1](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-1.png)
 
-![2](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/2.png)
+![2](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-2.png)
 
-![3](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/3.png)
-
-## 📦 Installation
+## 📦 Installation【Vue3】
 
 ```Javascript
-yarn add @auto/vehicle-plate-keyboard-vue
+yarn add afu-vehicle-plate-keyboard-vue
 ```
 
 ## 🔨 Usage
 
 ```JavaScript
-import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-vue';
+import { LicenseKeyboard } from 'afu-vehicle-plate-keyboard-vue';
 
 ...
 
-<LicenseKeyboard
-   visible={state.showKeyboard}
-   onChange={value => setState({ value })}
-   value={state.value}
-   done={() => setState({ showKeyboard: false })}
-   defalutConfig={{
-    // "使": [
-    //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-    // ],
-    // "京": [
-    //   ['ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC'],
-    //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-    // ]
-  }}
-/>
+<template>
+  <div>
+    <button
+      data-test-id="controlButton"
+      @click="toggleKeyboard"
+      type="submit"
+    >
+      {{ showKeyboard ? 'close' : 'open' }} the keyboard
+    </button>
+
+    <p data-test-id="value">{{ value }}</p>
+    <LicenseKeyboard
+      :visible="showKeyboard"
+      @done="hideKeyboard"
+      @onChange="updateValue"
+      :value="value"
+    />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+const showKeyboard = ref(false);
+const value = ref('');
+
+const toggleKeyboard = () => {
+  showKeyboard.value = !showKeyboard.value;
+};
+
+const hideKeyboard = () => {
+  showKeyboard.value = false;
+};
+
+const updateValue = (newValue:string) => {
+  value.value = newValue;
+};
+</script>
 ```
 
 ## 🗺 API
@@ -55,7 +70,6 @@ import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-vue';
 | ------------------ | ----------------------- | ----------------------------- |
 | visiable           | boolean                 | keyboard visible              |
 | onChange           | (value: string) => void | trigger when user tap         |
-| onCurRule          | (value: string) => void | 返回当前的匹配规则         |
 | value              | string                  | controlled value              |
 | done               | () => void              | trigger when keyborad dismiss |
 | confirmButtonStyle | StyleVlaue     | confirm button style          |

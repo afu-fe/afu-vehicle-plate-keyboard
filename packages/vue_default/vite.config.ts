@@ -42,7 +42,7 @@ export default defineConfig({
       // 组件库名称
       name: 'demo-design',
       // 文件名称, 打包结果举例: suemor.cjs
-      fileName: 'auto-vehicle-plate-keyboard-vue',
+      fileName: 'afu-vehicle-plate-keyboard-vue',
       // 打包格式
       formats: ['es', 'cjs'],
     },

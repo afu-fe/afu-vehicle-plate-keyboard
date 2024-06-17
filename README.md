@@ -9,7 +9,7 @@
 
 ## 🚗 Demo
 
-![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/4.gif)
+![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/5.gif)
 
 ## 📷 Screenshots
 

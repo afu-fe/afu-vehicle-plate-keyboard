@@ -1,10 +1,10 @@
-# @auto/vehicle-plate-keyboard-vue
+# afu-vehicle-plate-keyboard-vue
 
 vue 实现的车牌键盘。
 
 ## 🚗 Demo
 
-![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-4.gif)
+![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-5.gif)
 
 ## 📷 Screenshots
 
@@ -15,13 +15,13 @@ vue 实现的车牌键盘。
 ## 📦 Installation【Vue3】
 
 ```Javascript
-yarn add @auto/vehicle-plate-keyboard-vue
+yarn add afu-vehicle-plate-keyboard-vue
 ```
 
 ## 🔨 Usage
 
 ```JavaScript
-import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-vue';
+import { LicenseKeyboard } from 'afu-vehicle-plate-keyboard-vue';
 
 ...
 

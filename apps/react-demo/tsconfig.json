@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@auto/vehicle-plate-keyboard-react": ["../../packages/react/src/packages/index.ts"],
+      "afu-vehicle-plate-keyboard-react": ["../../packages/react_default/src/packages/index.ts"],
     }
   },
   "include": ["src"],

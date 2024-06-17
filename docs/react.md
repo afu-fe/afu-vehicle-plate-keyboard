@@ -1,52 +1,48 @@
-# @auto/vehicle-plate-keyboard-react
+# afu-vehicle-plate-keyboard-react
 
 React 实现的车牌键盘。
 
-## 💡 Features
-
-- 省份/使 + 字母（无 I/O）/ 数字 + 「港澳学警领挂」
-- [新能源车牌规则](https://zh.wikipedia.org/wiki/中华人民共和国民用机动车号牌#新能源汽车号牌)
-
 ## 🚗 Demo
 
-![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/4.gif)
+![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-5.gif)
 
 ## 📷 Screenshots
 
-![1](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/1.png)
+![1](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-1.png)
 
-![2](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/2.png)
-
-![3](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/3.png)
+![2](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-2.png)
 
 ## 📦 Installation
 
 ```Javascript
-yarn add @auto/vehicle-plate-keyboard-react
+yarn add afu-vehicle-plate-keyboard-react
 ```
 
 ## 🔨 Usage
 
 ```JavaScript
-import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-react';
+import { LicenseKeyboard } from 'afu-vehicle-plate-keyboard-react';
+function App() {
+  const [showKeyboard, setShowKeyboard] = useState(false);
+  const [value, setValue] = useState('');
 
-...
+  return (
+    <div>
+      <button
+        data-test-id="controlButton"
+        onClick={() => setShowKeyboard(!showKeyboard)}
+      >{`${showKeyboard ? 'close' : 'open'} the keyboard`}</button>
 
-<LicenseKeyboard
-   visible={state.showKeyboard}
-   onChange={value => setState({ value })}
-   value={state.value}
-   done={() => setState({ showKeyboard: false })}
-   defalutConfig={{
-    // "使": [
-    //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-    // ],
-    // "京": [
-    //   ['ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC'],
-    //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-    // ]
-  }}
-/>
+      <p data-test-id="value">{value}</p>
+      <LicenseKeyboard
+        visible={showKeyboard}
+        done={() => setShowKeyboard(false)}
+        onChange={(value: any) => setValue(value)}
+        value={value}
+      />
+    </div>
+  );
+}
 ```
 
 ## 🗺 API
@@ -55,7 +51,6 @@ import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-react';
 | ------------------ | ----------------------- | ----------------------------- |
 | visiable           | boolean                 | keyboard visible              |
 | onChange           | (value: string) => void | trigger when user tap         |
-| onCurRule          | (value: string) => void | 返回当前的匹配规则         |
 | value              | string                  | controlled value              |
 | done               | () => void              | trigger when keyborad dismiss |
 | confirmButtonStyle | StyleVlaue     | confirm button style          |
