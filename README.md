@@ -1,36 +1,29 @@
-# @auto/vehicle-plate-keyboard-vue or @auto/vehicle-plate-keyboard-react
+# afu-vehicle-plate-keyboard-react or afu-vehicle-plate-keyboard-vue
 
-车牌键盘。
-
-## 💡 Features
-
-- 省份/使 + 字母（无 I/O）/ 数字 + 「港澳学警领挂」
-- [新能源车牌规则](https://zh.wikipedia.org/wiki/中华人民共和国民用机动车号牌#新能源汽车号牌)
+简版车牌键盘。
 
 ## 🚗 Demo
 
-![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/5.gif)
+![Demo](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-5.gif)
 
 ## 📷 Screenshots
 
-![1](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/1.png)
+![1](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-1.png)
 
-![2](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/2.png)
-
-![3](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/3.png)
+![2](https://z.autoimg.cn/sou/auto-vehicle-plate-keyboard/default-2.png)
 
 ## 📦 Installation
 
 ### vue3 
 ```Javascript
-yarn add @auto/vehicle-plate-keyboard-vue 
-npm install @auto/vehicle-plate-keyboard-vue
+yarn add afu-vehicle-plate-keyboard-vue
+npm install afu-vehicle-plate-keyboard-vue
 ```
 
 ### React 
 ```Javascript
-yarn add @auto/vehicle-plate-keyboard-react
-npm install @auto/vehicle-plate-keyboard-react
+yarn add afu-vehicle-plate-keyboard-react 
+npm install afu-vehicle-plate-keyboard-react 
 ```
 
 ## 🔨 Usage
@@ -38,7 +31,7 @@ npm install @auto/vehicle-plate-keyboard-react
 ### React
 
 ```JavaScript
-import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-react';
+import { LicenseKeyboard } from 'afu-vehicle-plate-keyboard-react ';
 import React from 'react'
 
 import { useState } from 'react';
@@ -60,15 +53,6 @@ function App() {
         done={() => setShowKeyboard(false)}
         onChange={(value: any) => setValue(value)}
         value={value}
-        defalutConfig={{
-          // "使": [
-          //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-          // ],
-          // "京": [
-          //   ['ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC', 'ABC'],
-          //   ['ZCDEFGHJKLMNOPQRS', 'ABCDEFGHJK', '0123456789', '0123456789', '0123456789', '0123456789', '0123456789']
-          // ]
-        }}
       />
     </div>
   );
@@ -104,7 +88,7 @@ export default App;
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { LicenseKeyboard } from '@auto/vehicle-plate-keyboard-vue';
+import { LicenseKeyboard } from 'afu-vehicle-plate-keyboard-vue';
 const showKeyboard = ref(false);
 const value = ref('');
 
