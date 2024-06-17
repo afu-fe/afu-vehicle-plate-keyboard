@@ -1,0 +1,29 @@
+{
+  "name": "@auto/vehicle-plate-keyboard-vue-default",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/auto-vehicle-plate-keyboard-vue.cjs",
+  "module": "dist/auto-vehicle-plate-keyboard-vue.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.7",
+    "less": "^4.2.0",
+    "vite-plugin-css-injected-by-js": "^3.5.0",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}

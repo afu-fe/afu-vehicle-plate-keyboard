@@ -1,0 +1,6 @@
+packages:
+  - 'packages/*'
+  - 'playground/*'
+  - 'app/*'
+  - 'packages/**/__tests__/**'
+  - docs
